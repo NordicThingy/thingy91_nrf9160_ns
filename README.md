@@ -25,6 +25,7 @@ Suivez les étapes ci-dessous pour la configuration :
 4. Installation du nRF Connect Extension Pack dans VS Code
 - Dans la barre d'activités de VS Code, cliquez sur l'icône Extensions.
 - Recherchez nRF Connect for VS Code Extension Pack, puis cliquez sur Installer.
+
 Le nRF Connect Extension Pack pour VS Code permet de :
   - Développer, créer, déboguer et déployer des applications embarquées basées sur le SDK nRF Connect.
   - Interagir avec le compilateur, l'éditeur de liens, le système de construction complet, un débogueur compatible RTOS, et le SDK nRF Connect.
