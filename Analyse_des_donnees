@@ -1,0 +1,62 @@
+import pandas as pd
+import re
+
+# Chemin du fichier texte
+file_path = r'C:\chemin d'accès de votre fichier PuTTY.log'
+
+# Liste pour stocker les données extraites
+data = []
+
+# Ouvrir le fichier et lire ligne par ligne
+with open(file_path, 'r') as file:
+    lines = file.readlines()
+
+# Variables temporaires pour stocker les valeurs de x, y, z, T, P, H
+x, y, z, T, P, H = None, None, None, None, None, None
+
+# Lire chaque ligne et extraire les valeurs
+for line in lines:
+    # Extraire la valeur de x, y, z, T, P, H en utilisant des expressions régulières
+    if 'x =' in line:
+        x = re.search(r'x =\s*(-?\d+\.\d+)', line)
+        if x: x = x.group(1)
+    if 'y =' in line:
+        y = re.search(r'y =\s*(-?\d+\.\d+)', line)
+        if y: y = y.group(1)
+    if 'z =' in line:
+        z = re.search(r'z =\s*(-?\d+\.\d+)', line)
+        if z: z = z.group(1)
+    if 'T:' in line:
+        T = re.search(r'T: (\d+\.\d+)', line)
+        if T: T = T.group(1)
+    if 'P:' in line:
+        P = re.search(r'P: (\d+\.\d+)', line)
+        if P: P = P.group(1)
+    if 'H:' in line:
+        H = re.search(r'H: (\d+\.\d+)', line)
+        if H: H = H.group(1)
+    
+    # Si toutes les valeurs sont extraites, ajouter à la liste
+    if x and y and z and T and P and H:
+        # Ajouter les valeurs extraites dans la liste
+        data.append([x, y, z, T, P, H])
+        # Réinitialiser les valeurs pour le prochain ensemble de données
+        x, y, z, T, P, H = None, None, None, None, None, None
+
+# Afficher les données extraites pour vérifier
+print("Données extraites :")
+for row in data:
+    print(row)
+
+# Vérifier si des données ont été extraites
+if not data:
+    print("Aucune donnée extraite. Veuillez vérifier le fichier source.")
+
+# Créer un DataFrame pandas avec les données extraites
+df = pd.DataFrame(data, columns=['x', 'y', 'z', 'T', 'P', 'H'])
+
+# Sauvegarder dans un fichier Excel
+output_file = r'C:\chemin d'accès à la sauvegarde du fichier excel.xlxs'
+df.to_excel(output_file, index=False)
+
+print(f"Les données ont été extraites et sauvegardées dans {output_file}")
