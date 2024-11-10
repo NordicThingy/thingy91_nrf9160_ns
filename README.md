@@ -17,17 +17,18 @@ Suivez les étapes ci-dessous pour la configuration :
 
 1. Installation des outils en ligne de commande nRF
 - Téléchargez et installez les nRF Command Line Tools depuis le lien suivant : https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools/Download.
-Les nRF Command Line Tools incluent nrfjprog, un outil essentiel pour flasher le firmware sur vos kits de développement Nordic.
-2. Installation de Visual Studio Code
-Rendez-vous sur https://code.visualstudio.com/download et installez la version de VS Code correspondant à votre système d'exploitation.
-3. Installation du nRF Connect Extension Pack dans VS Code
-Dans la barre d'activités de VS Code, cliquez sur l'icône Extensions.
-Recherchez nRF Connect for VS Code Extension Pack, puis cliquez sur Installer.
-Le nRF Connect Extension Pack pour VS Code permet de :
+- Les nRF Command Line Tools incluent nrfjprog, un outil essentiel pour flasher le firmware sur vos kits de développement Nordic.
 
-Développer, créer, déboguer et déployer des applications embarquées basées sur le SDK nRF Connect.
-Interagir avec le compilateur, l'éditeur de liens, le système de construction complet, un débogueur compatible RTOS, et le SDK nRF Connect.
-Utiliser un éditeur visuel pour les fichiers Devicetree et un terminal série intégré.
+2. Installation de Visual Studio Code
+- Rendez-vous sur https://code.visualstudio.com/download et installez la version de VS Code correspondant à votre système d'exploitation.
+
+4. Installation du nRF Connect Extension Pack dans VS Code
+- Dans la barre d'activités de VS Code, cliquez sur l'icône Extensions.
+- Recherchez nRF Connect for VS Code Extension Pack, puis cliquez sur Installer.
+Le nRF Connect Extension Pack pour VS Code permet de :
+  - Développer, créer, déboguer et déployer des applications embarquées basées sur le SDK nRF Connect.
+  - Interagir avec le compilateur, l'éditeur de liens, le système de construction complet, un débogueur compatible RTOS, et le SDK nRF Connect.
+  - Utiliser un éditeur visuel pour les fichiers Devicetree et un terminal série intégré.
 4. Installation de la chaîne d'outils (Toolchain) sur VS Code
 Lors du premier lancement de l'extension nRF Connect for VS Code, vous serez invité à installer une chaîne d'outils. Si aucune n'est détectée, procédez ainsi :
 Cliquez sur Installer la chaîne d'outils.
