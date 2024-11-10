@@ -8,13 +8,15 @@ Matériel requis:
 - Visual Studio Code avec l'extension nRF Connect for VS Code
 - Putty
 - Câble micro-USB
-Installation et Configuration
-Pour exécuter ce projet, vous devez installer et configurer le nRF Connect for Desktop et Visual Studio Code (VS Code). Note : Assurez-vous que la chaîne d'outils (Toolchain) et le SDK sont installés sur le disque C:\ de l'ordinateur, dans un dossier dédié. Le dossier contenant le code pour le Thingy:91 doit également être placé dans un dossier de programmation sur le disque C:.
+
+Installation et Configuration:
+Pour exécuter ce projet, vous devez installer et configurer le nRF Connect for Desktop et Visual Studio Code (VS Code). 
+Note : Assurez-vous que la chaîne d'outils (Toolchain) et le SDK sont installés sur le disque C:\ de l'ordinateur, dans un dossier dédié. Le dossier contenant le code pour le Thingy:91 doit également être placé dans un dossier de programmation sur le disque C:\.
 
 Suivez les étapes ci-dessous pour la configuration :
 
 1. Installation des outils en ligne de commande nRF
-Téléchargez et installez les nRF Command Line Tools depuis le lien suivant : nRF Command Line Tools - Nordic Semiconductor.
+- Téléchargez et installez les nRF Command Line Tools depuis le lien suivant : https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools/Download.
 Les nRF Command Line Tools incluent nrfjprog, un outil essentiel pour flasher le firmware sur vos kits de développement Nordic.
 2. Installation de Visual Studio Code
 Rendez-vous sur https://code.visualstudio.com/download et installez la version de VS Code correspondant à votre système d'exploitation.
