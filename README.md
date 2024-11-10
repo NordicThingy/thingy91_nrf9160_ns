@@ -47,7 +47,7 @@ Une fois ces étapes terminées, votre environnement est prêt pour le développ
 **Utilisation du code:**
 1. Chargement du code
 - Ouvrir VS Code
-- Télécharger et décompresser le code, puis ouvrez le dossier contenant le code dans VS Code.
+- Télécharger et décompresser le dossier, puis ouvrez le dossier contenant le code dans VS Code (thingy9160_donnees).
 
 2. Build du code :
 - Dans l'extension nRF Connect dans la barre d'activité, cliquez sur Add Build Configuration.
@@ -82,3 +82,11 @@ Une fois ces étapes terminées, votre environnement est prêt pour le développ
     - Sélectionnez All Session Output.
     - Dans Log File name, choisissez l’emplacement et le nom pour enregistrer les données.
 - Cliquez sur Open pour lancer l’enregistrement des données dans le fichier log.
+
+
+**Analyse des données extraites par PuTTY:**
+- Ouvrir dans VS Code le fichier Python qui se trouve dans le dossier "Analyse des données"
+- Dans la ligne 5, remplacez 'C:\\chemin d'accès de votre fichier PuTTY' par le vrai chemin à votre fichier (Attention, l'extension du fichier est un .log et non un .txt)
+- Dans la ligne 59, remplacez 'C:\\chemin d'accès à la sauvegarde du fichier excel' par le chemin ou vous voulez que le fichier excel se auvegarde (Attention, pas la peine de créer le fichier excel la ou vous voulez le créer mais nommer le, exemple: chemin d'accès suivant: c:\\enregistrement\Donnees_extraites.xlxs mais pas besoin de créer le fichier excel, juste de l'écrire dans python qui s'occupera de le créer)
+- Faites ensuite dans VS Code Run=>Run Without Debugging et choisir le debugger Python
+- Vos données sont extraites dans le fichier excel dans les 6 premières colonnes
