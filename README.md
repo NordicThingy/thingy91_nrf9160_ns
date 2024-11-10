@@ -3,7 +3,7 @@ Détection de Chocs et Orientation avec Accéléromètres et Capteur Environneme
 Ce projet permet de détecter les chocs et l'orientation du Thingy:91 de Nordic Semiconductor en utilisant des accéléromètres et un capteur environnemental. Le programme surveille en continu les données des capteurs et allume une LED en fonction des événements détectés. Le code est compatible avec le SDK nRF Connect.
 
 
-Matériel requis:
+**__Matériel requis:__**
 - Thingy:91 de Nordic Semiconductor
 - nRF Connect for Desktop
 - Visual Studio Code avec l'extension nRF Connect for VS Code
