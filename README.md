@@ -3,7 +3,7 @@ Détection de Chocs et Orientation avec Accéléromètres et Capteur Environneme
 Ce projet permet de détecter les chocs et l'orientation du Thingy:91 de Nordic Semiconductor en utilisant des accéléromètres et un capteur environnemental. Le programme surveille en continu les données des capteurs et allume une LED en fonction des événements détectés. Le code est compatible avec le SDK nRF Connect.
 
 
-**<u>Matériel requis:<u>**
+**Matériel requis:**
 - Thingy:91 de Nordic Semiconductor
 - nRF Connect for Desktop
 - Visual Studio Code avec l'extension nRF Connect for VS Code
@@ -11,7 +11,7 @@ Ce projet permet de détecter les chocs et l'orientation du Thingy:91 de Nordic 
 - Câble micro-USB
 
 
-Installation et Configuration:
+**Installation et Configuration:**
 Pour exécuter ce projet, vous devez installer et configurer le nRF Connect for Desktop et Visual Studio Code (VS Code). 
 Note : Assurez-vous que la chaîne d'outils (Toolchain) et le SDK sont installés sur le disque C:\ de l'ordinateur, dans un dossier dédié. Le dossier contenant le code pour le Thingy:91 doit également être placé dans un dossier de programmation sur le disque C:\.
 Suivez les étapes ci-dessous pour la configuration :
@@ -44,7 +44,7 @@ Cliquez sur Installer le SDK pour afficher les versions disponibles et choisir c
 Une fois ces étapes terminées, votre environnement est prêt pour le développement avec le SDK nRF Connect et Visual Studio Code.
 
 
-Utilisation du code:
+**Utilisation du code:**
 1. Chargement du code
 - Ouvrir VS Code
 - Télécharger et décompresser le code, puis ouvrez le dossier contenant le code dans VS Code.
@@ -56,7 +56,7 @@ Utilisation du code:
     - Le Base Devicetree overlays liste les superpositions pour l’arborescence des périphériques qui peuvent être ajoutées ou modifiées pour décrire le matériel.
 - Cliquez sur Build Configuration et attendez la fin du processus de compilation.
 
-3. Envoi du code au Thingy:91
+**Envoi du code au Thingy:91:**
 - Connectez la carte Thingy:91 à votre ordinateur via un câble micro-USB.
 - Allumez la carte en appuyant sur le bouton SW3 puis en activant l'interrupteur ON/OFF.
 ![image](https://github.com/user-attachments/assets/94f3a7b5-c8cf-49e6-ae4f-acffe8581d2b)
@@ -65,7 +65,7 @@ Utilisation du code:
 - Dans Add File, cliquez sur Browse, allez dans le dossier du code > build/zephyr, et sélectionnez app_signed.hex.
 - Cliquez ensuite sur Write, puis Write à nouveau dans la fenêtre de confirmation pour flasher le code.
 
-4. Récupération des données avec PuTTY
+**Récupération des données avec PuTTY:**
 - Installez PuTTY.
 - Ouvrez PuTTY et configurez-le pour accéder au port COM du Thingy:91
 - Pour identifier le port COM :
