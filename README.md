@@ -59,8 +59,7 @@ Utilisation du code:
 3. Envoi du code au Thingy:91
 - Connectez la carte Thingy:91 à votre ordinateur via un câble micro-USB.
 - Allumez la carte en appuyant sur le bouton SW3 puis en activant l'interrupteur ON/OFF.
-  ![image](https://github.com/user-attachments/assets/5fe82f68-e840-49af-bd3e-7e80a86e69c4)
-
+![image](https://github.com/user-attachments/assets/94f3a7b5-c8cf-49e6-ae4f-acffe8581d2b)
 - Ouvrez nRF Connect for Desktop, puis l'outil Programmer (à installer si nécessaire).
 - Cliquez sur Select a Device et sélectionnez le Thingy:91 dans la liste.
 - Dans Add File, cliquez sur Browse, allez dans le dossier du code > build/zephyr, et sélectionnez app_signed.hex.
