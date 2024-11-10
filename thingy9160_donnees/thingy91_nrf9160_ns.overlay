@@ -1,0 +1,28 @@
+/*
+ * Copyright (c) 2024 Nordic Semiconductor ASA
+ *
+ * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+ */
+
+ / {
+	aliases {
+		accel0 = &adxl362;
+
+	};
+};
+
+&i2c2 {
+	bme680: bme680@76 {};
+};
+
+&spi3 {
+	adxl362: adxl362@0 {
+		autosleep;
+	};
+
+	adxl372: adxl372@1 {
+		odr = <4>;
+		bw = <4>;
+		hpf = <0>;
+	};
+};
