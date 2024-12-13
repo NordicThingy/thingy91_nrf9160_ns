@@ -7,6 +7,11 @@
 #include <zephyr/sys/util_macro.h>
 #include <zephyr/kernel.h>
 #include <zephyr/drivers/gpio.h>
+#include <zephyr/sys/printk.h>
+
+#if defined(CONFIG_ADP536X)
+#include <adp536x.h>
+#endif
 
 #define SLEEP_TIME_MS   1000 //Temps de pause entre chaque loop
 #define SEUIL 15.0  // Seuil de choc en m/s²
@@ -33,14 +38,14 @@ static int shock_counter = 0; // Compteur de chocs
 void detectShock(float acc_x, float acc_y, float acc_z) {
     if (fabs(acc_x) > SEUIL || fabs(acc_y) > SEUIL || fabs(acc_z) > SEUIL) {
         shock_counter++;
-        printk("Attention, choc détecté ! Compteur de chocs : %d\n", shock_counter);
+        printk("Attention, choc detecte ! Compteur de chocs : %d\n", shock_counter);
     }
 }
 
 //fonction de détection de l'orientation en fonction des valeurs d'accélération mesuré
 void detectOrientation(float acc_x, float acc_y, float acc_z){
 	if (acc_z >= -12 && acc_z <= -8 && acc_x >= -1 && acc_x <= 1 && acc_y >= -1 && acc_y <= 1) {
-        printf("Orientation: à plat (0°)\n");
+        printf("Orientation: a plat (0°)\n");
     } else if (acc_x >= -12 && acc_x <= -8 && acc_y >= -1 && acc_y <= 1 && acc_z >= -1 && acc_z <= 1) {
         printf("Orientation: verticale (90°)\n");
     } else if (acc_z >= 8 && acc_z <= 12 && acc_x >= -1 && acc_x <= 1 && acc_y >= -1 && acc_y <= 1) {
@@ -97,11 +102,9 @@ static int print_accels(const struct device *dev1)
 	printk("x = %12.6f m/s^2\n", sensor_value_to_double(&accel[0]));
 	printk("y = %12.6f m/s^2\n", sensor_value_to_double(&accel[1]));
 	printk("z = %12.6f m/s^2\n", sensor_value_to_double(&accel[2]));
-
 	// Détecter le choc et l'orientation
 	detectShock(sensor_value_to_double(&accel[0]), sensor_value_to_double(&accel[1]), sensor_value_to_double(&accel[2]));
 	detectOrientation(sensor_value_to_double(&accel[0]), sensor_value_to_double(&accel[1]), sensor_value_to_double(&accel[2]));
-
 	return 0;
 }
 
@@ -159,6 +162,7 @@ int main(void)
 				return 0;
 			}
 		}
+	
 
 		//Mesure des données environnementales du bme280
 		sensor_sample_fetch(dev_bme);
@@ -172,7 +176,7 @@ int main(void)
 		printf("P: %d.%06d kPa\n", press.val1, press.val2);
 		printf("H: %d.%06d %RH\n", humidity.val1, humidity.val2);
 		printf("\n");
-
+		
 		counter++;  // Incrémente le compteur de secondes				
 		k_msleep(SLEEP_TIME_MS);
 	}
