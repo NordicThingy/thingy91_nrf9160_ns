@@ -12,8 +12,11 @@ Ce projet permet de détecter les chocs et l'orientation du Thingy:91 de Nordic 
 
 
 **Installation et Configuration:**
+
 Pour exécuter ce projet, vous devez installer et configurer le nRF Connect for Desktop et Visual Studio Code (VS Code). 
+
 Note : Assurez-vous que la chaîne d'outils (Toolchain) et le SDK sont installés sur le disque C:\ de l'ordinateur, dans un dossier dédié. Le dossier contenant le code pour le Thingy:91 doit également être placé dans un dossier de programmation sur le disque C:\.
+
 Suivez les étapes ci-dessous pour la configuration :
 1. Installation des outils en ligne de commande nRF
 - Téléchargez et installez les nRF Command Line Tools depuis le lien suivant : https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools/Download.
