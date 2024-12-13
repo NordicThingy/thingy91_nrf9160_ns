@@ -82,11 +82,10 @@ Dans cette section, vous pourrez installer, désinstaller et sélectionner la ve
     - Définissez la vitesse (Speed) à 115200.
 - Cliquez sur Open pour ouvrir la connexion série.
 - Optionnel (à faire si vous souhaitez sauvegarder vos données et les analyser à l'aide de la partie suivante): Enregistrement des données mesurées
-    - Dans PuTTY, allez à Session > Logging.
+    - Dans PuTTY (avant de faire Open pour ouvrir la connexion série), allez dans Session > Logging (dans la barre de gauche).
     - Sélectionnez All Session Output.
     - Dans Log File name, choisissez l’emplacement et le nom pour enregistrer les données.
 - Cliquez sur Open pour lancer l’enregistrement des données dans le fichier log.
-
 
 **Analyse des données extraites par PuTTY:**
 - Ouvrir dans VS Code le fichier Python "Analyse_des_donnees"
