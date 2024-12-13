@@ -81,7 +81,7 @@ Dans cette section, vous pourrez installer, désinstaller et sélectionner la ve
     - Dans Serial Line, entrez COMX (où X correspond au numéro de port COM identifié).
     - Définissez la vitesse (Speed) à 115200.
 - Cliquez sur Open pour ouvrir la connexion série.
-- Optionnel : Enregistrement des données mesurées
+- Optionnel (à faire si vous souhaitez sauvegarder vos données et les analyser à l'aide de la partie suivante): Enregistrement des données mesurées
     - Dans PuTTY, allez à Session > Logging.
     - Sélectionnez All Session Output.
     - Dans Log File name, choisissez l’emplacement et le nom pour enregistrer les données.
