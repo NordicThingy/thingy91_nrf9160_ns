@@ -89,7 +89,9 @@ Dans cette section, vous pourrez installer, désinstaller et sélectionner la ve
 
 **Analyse des données extraites par PuTTY:**
 - Ouvrir dans VS Code le fichier Python "Analyse_des_donnees"
+- Faites le code avec Run > Run Without Debugging et choisir le débugger Python, vous devriez avoir une erreur
+- Tapez la commande : pip install openpyxl
 - Dans la ligne 5, remplacez 'C:\\chemin d'accès de votre fichier PuTTY' par le vrai chemin à votre fichier (Attention, l'extension du fichier est un .log et non un .txt)
 - Dans la ligne 59, remplacez 'C:\\chemin d'accès à la sauvegarde du fichier excel' par le chemin ou vous voulez que le fichier excel se auvegarde (Attention, pas la peine de créer le fichier excel la ou vous voulez le créer mais nommer le, exemple: chemin d'accès suivant: c:\\enregistrement\Donnees_extraites.xlxs mais pas besoin de créer le fichier excel, juste de l'écrire dans python qui s'occupera de le créer)
-- Faites ensuite dans VS Code Run=>Run Without Debugging et choisir le debugger Python
+- Faites ensuite dans VS Code Run > Run Without Debugging et choisir le debugger Python
 - Vos données sont extraites dans le fichier excel dans les 6 premières colonnes
